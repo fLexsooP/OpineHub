@@ -3,11 +3,13 @@
 import { useState } from 'react';
 
 export default function CreatePost() {
-  const [post, setPost] = useState({ title: "", content: "" });
+  const [post, setPost] = useState({ title: '', content: '' });
   const [isDisabled, setIsDisabled] = useState(false);
 
-  const handlePostChange = (e: any) => {
-    const { name , value } = e.target;
+  const handlePostChange = (
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => {
+    const { name, value } = e.target;
     setPost((prevValue) => {
       return {
         ...prevValue,

@@ -27,13 +27,13 @@ export default function CreatePost() {
 
   // Create a post
   const { mutate } = useMutation(
-    async (post: Post) => await axios.post('/api/posts/addPost', { post }) // TODO: error
+    async (post: Post) => await axios.post('/api/posts/addPost', { post })
   );
 
   const submitPost = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsDisabled(true);
-    mutate(post); // TODO: error
+    mutate(post);
   };
 
   return (

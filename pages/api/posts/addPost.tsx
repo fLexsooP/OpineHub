@@ -13,9 +13,10 @@ export default async function handler(
       return res
         .status(401)
         .json({ message: 'Please sign in to make a post.' });
-    const post = req.body.post
+    console.log(req.body);
 
-    if(post.content.length > 300)
-      return res.status(403).json({message: 'Please write shorter.'})
+    // const post = req.body.post
+    // if(post.content.length > 300)
+    //   return res.status(403).json({message: 'Please write shorter.'})
   }
 }
